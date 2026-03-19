@@ -36,7 +36,7 @@ const HomePage = () => {
     <Navbar/>
     
     {isRateLimited && <RateLimitedUI />}
-    {notes.length===0 && !isRateLimited && <NotesNotFound />}
+    {!loading && notes.length===0 && !isRateLimited && <NotesNotFound />}
     <div className='max-w-7xl mx-auto p-4 mt-6'>
       {loading &&  <div className='text-center text-primary py-10'>Loading...</div> }
       {notes.length > 0 && !isRateLimited &&(
