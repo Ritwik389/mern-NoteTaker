@@ -67,7 +67,3 @@ export async function deleteNote  (req, res){
 // export function getAllNotes1 (req,res) {
 //     res.send("Hello");
 // }
-
-// we can also define a function like this
-
-// mongodb+srv://ritwik8march_db_user:S3Go3K5xYIIJpx7E@cluster0.ucp0ruo.mongodb.net/?appName=Cluster0

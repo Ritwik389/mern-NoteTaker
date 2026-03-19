@@ -1,4 +1,4 @@
-// import express from "express";   // //if using type = module, in package.json then use this
+// const express = require("express");  // //if using type = module, in package.json then use this
 
 //if u want to use the import syntax go to package.json and there change the type to be module
 
@@ -8,10 +8,13 @@ import { connectDB } from "./config/db.js";
 import dotenv from "dotenv"
 import rateLimiter from "./middleware/rateLimiter.js";
 import cors from "cors"
+import path from "path"
  
 dotenv.config();
 
 const app = express();
+const PORT = process.env.PORT
+const __dirname = path.resolve(); //path of the backend folder(current folder)
 
 
 //middleware
@@ -26,12 +29,22 @@ app.use(express.json()); //parses the json bodies i.e allows to read req.body as
 
 //upstash used for rate limiting
 
-app.use(cors({
+if (process.env.NODE_ENV != "production"){
+    app.use(cors({
     origin: "http://localhost:5173" 
 }))
+}
 app.use(rateLimiter)
 app.use("/api/notes", notesRoutes);
-const PORT = process.env.PORT
+
+if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.join(__dirname, "../frontend/dist")))
+
+    app.get ("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "../frontend/", "dist", "index.html"))
+    })
+}
+
 
 
 // app.get("/api/notes", (req, res)=>{ //If someone sends a GET request to this route, run this code. 

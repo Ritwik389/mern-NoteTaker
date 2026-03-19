@@ -36,3 +36,9 @@ bg.ibelick.com for gradient backgrounds
 
 and then we run npm install express
 push code on github and then deploy it using render.com
+
+
+to deploy we want to pujt both backend and frontend in same url, so we put the frontend in backend, for that we first run npm run build in frontend, creating an optimized directory with our react application
+after that we use path dependency in backend server.js to fetch the frontend folder, using backend only
+
+for production we simply only take the request and everyhting in backend only and then redirect it to frontend if the request is not in backend, serving the react app in backend only
