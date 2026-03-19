@@ -1,0 +1,38 @@
+to get a frontend framework we use vite, and run in the frontend folder, npm create vite@latest .
+the . is to make sure it creates in teh current folder only
+and then run npm install and npm run dev here also
+pckgs to install
+npm i react-router
+npm i react-hot-toast
+
+daisy ui, tailwind css, used to make css easier to write
+
+
+React Router is the standard library for handling navigation and routing in React web applications, 
+enabling the creation of dynamic, multi-page user experiences. 
+
+React Hot Toast is a lightweight, customizable library for displaying non-intrusive notification 
+messages ("toasts") to users
+
+Daisyui used for great frontend themes and buttons, similar to tailwind but works upon tailwind
+
+lucide-react used for icons
+and for backend it is npm install
+
+Axios is a popular, promise-based JavaScript library used to make asynchronous HTTP requests from browsers and Node.js environments. It streamlines interaction with RESTful APIs, enabling developers to send GET, POST, PUT, DELETE, and other requests while automatically handling JSON data transformation. 
+Medium
+Medium
+ +2
+Key Uses and Features:
+Data Fetching & Submission: Easily fetch data from APIs (GET) or send data to servers (POST, PUT).
+Promise-Based: Uses async/await and Promises for cleaner asynchronous code.
+Automatic JSON Conversion: Automatically converts server responses to JSON objects.
+
+then npm init
+which gives us a package.json file
+
+bg.ibelick.com for gradient backgrounds
+
+
+and then we run npm install express
+push code on github and then deploy it using render.com
