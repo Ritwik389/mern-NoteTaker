@@ -41,3 +41,5 @@ cd frontend
 npm install
 npm run dev
 ```
+
+<h3>Check it out <a href="https://mern-notetaker-r1ky.onrender.com"> here </a></h3>
